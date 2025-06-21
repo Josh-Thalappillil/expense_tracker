@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div class="dashboard-container">
+  <h1>Welcome to the Dashboard</h1>
+  <p *ngIf="totalThisMonth > 0">
+    <strong>You’ve spent ${{ totalThisMonth | number:'1.2-2' }} this month</strong>
+    <span *ngIf="topCategory">— most on <b>{{ topCategory }}</b></span>
+  </p>
+  <p *ngIf="totalThisMonth === 0">No expenses recorded for this month yet.</p>
+  <div style="max-width: 400px; margin: 2rem auto;">
+    <p-chart type="pie" [data]="chartData" [options]="chartOptions"></p-chart>
+  </div>
+</div>
