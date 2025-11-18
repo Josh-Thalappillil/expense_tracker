@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { Expense } from '../../models/expense.model';
 
 @Component({
   selector: 'app-expense-form',
@@ -13,7 +14,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
   
 })
 export class ExpenseFormComponent implements OnInit {
-  @Input() expense: any = {};
+  @Input() expense!: Expense;
   categories: any[] = [];
   selectedFile: File | null = null;
   

@@ -15,7 +15,11 @@
     <tbody>
       <tr *ngFor="let expense of expenses">
         <td>{{ expense.date }}</td>
-        <td>{{ expense.description }}</td>
+        <td>
+          <a href="javascript:void(0)" (click)="editExpense(expense)">
+            {{ expense.description }}
+          </a>
+        </td>
         <td>{{ expense.amount }}</td>
         <td>{{ expense.currency }}</td>
         <td>
