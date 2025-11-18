@@ -8,7 +8,7 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [PRIMENG_MODULES, NavbarComponent, CommonModule],
+  imports: [PRIMENG_MODULES, CommonModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })

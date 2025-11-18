@@ -10,7 +10,7 @@ import { Expense } from '../../models/expense.model';
 @Component({
   selector: 'app-expense-list',
   templateUrl: './expense-list.component.html',
-  imports: [CommonModule, NavbarComponent, PRIMENG_MODULES],
+  imports: [CommonModule, PRIMENG_MODULES],
   styleUrls: ['./expense-list.component.css']
 })
 export class ExpenseListComponent implements OnInit {

@@ -9,7 +9,7 @@ import { Expense } from '../../models/expense.model';
 @Component({
   selector: 'app-expense-form',
   templateUrl: './expense-form.component.html',
-  imports: [CommonModule, FormsModule, NavbarComponent],
+  imports: [CommonModule, FormsModule],
   styleUrls: ['./expense-form.component.css']
   
 })
