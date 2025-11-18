@@ -7,7 +7,7 @@ import { PRIMENG_MODULES } from '../../primeng-modules';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule, PRIMENG_MODULES],
+  imports: [CommonModule, RouterModule, ...PRIMENG_MODULES],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })

@@ -8,7 +8,7 @@ import { PRIMENG_MODULES } from '../primeng-modules';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, PRIMENG_MODULES], 
+  imports: [CommonModule, FormsModule, ...PRIMENG_MODULES], 
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })

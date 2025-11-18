@@ -34,9 +34,16 @@ export class ExpenseListComponent implements OnInit {
 
   editExpense(expense: Expense) {
     const dialog = this.dialog.open(ExpenseFormComponent, {
-      header: 'hi',
-      data: {expense},
-    })
+      // header: 'Edit Expense',
+      data: { expense },
+    });
+
+    // Refresh list when dialog closes (payload contains saved/updated expense)
+    dialog.onClose.subscribe((payload) => {
+      if (payload) {
+        this.loadExpenses();
+      }
+    });
   } 
 // up to here thinking about opening a dialog to edit the items wanted to reuse the form but dont think we can
   deleteExpense(id: number) {
